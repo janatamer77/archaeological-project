@@ -5,9 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+       html, body{
+            background-color: #F8EDE3 ;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace
+        }
+        /* .vertical {
+             background-color: #3E2C23;
+             width: 200px;
+             height: 100vh;
+             display: flex;
+             flex-direction: column;
+             align-items: flex-start;
+             padding-top: 20px;
+        } */
+        #h1{
+             color: #F8EDE3;
+             font-size:x-large;
+             font-weight: 900;
+             padding-left: 30px;
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            text-align: center;
+            background-color: #3E2C23;
+            width: 100%;
+        }
+        nav{
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            text-align: center;  
+        } 
+        a{
+            margin-left: 10px;
+            margin-right: 10px;
+            color: #F8EDE3;
+            font-size: large; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+            padding-right: 30px;
+            padding-left: 20px;
+            text-decoration: none;
+            transition: 0.3;  
+        }
+        nav a:hover{
+            color: #d7b547;
+            transform: translateY(-7px);
+       }
+        nav a.active{
+          border-bottom: 2px solid white;
+          color:  #d7b547;
+          font-size: medium;
+        }
+        h2{
+            margin: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            url("images/photo_2026-04-26_14-07-16.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d7b547;
+            font-size: 50px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        p{
+            color: #3E2C23;
+            font-size: larger;
+        }
+    </style>
+    <header class="top">
+        <h1 id="h1"> secrets Of Kemet</h1>
+        <nav class="horizontal">
+             <button onclick="toggleNav()" class="nav-button"></button> 
+            <a href="index.html">Home</a>
+            <a href="kings.html" class="active">kings</a>
+            <a href="museums.html">Museums</a>
+            <a href="gallery.html">Gallery </a>
+            <a href="tickets.html">Tickets</a>
+            <a href="login.html"> Log in </a>
+            <a href="sign-in.html">sign in </a>
+            <a href="about.html">About</a>
+
+        </nav>
+    </header>
 
 </head>
 <body>
+    <div class="image"></div>
+    <h2>Kings Of Ancient Egypt</h2>
++
     <script src="script.js"></script>
 </body>
 
