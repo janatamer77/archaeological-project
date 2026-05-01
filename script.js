@@ -11,27 +11,3 @@ themeBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
-
-let btn = document.querySelector(".search-btn");
-let box = document.getElementById("search-box");
-if (btn) {
-    btn.addEventListener("click", function () {
-        box.classList.toggle("active");
-    });
-}
-let input = document.querySelector("#search-box input");
-
-if (input) {
-    input.addEventListener("keyup", function () {
-        let value = input.value.toLowerCase();
-        let items = document.querySelectorAll(".card, .museum");
-        items.forEach(item => {
-            let textToSearch = item.textContent.toLowerCase();
-            if (textToSearch.includes(value)) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
-            }
-        });
-    });
-}
