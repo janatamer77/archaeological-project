@@ -1,3 +1,4 @@
+//  theme 
 const themeBtn = document.getElementById('theme-btn');
 const bodyElement = document.body;
 if (localStorage.getItem('theme') === 'dark') {
@@ -11,3 +12,22 @@ themeBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
+// search
+ let btn = document.querySelector(".search-btn");
+  let box = document.getElementById("search-box");
+ btn.addEventListener("click", function () {
+  box.classList.toggle("active");
+      });
+      let input = document.querySelector("#search-box input");
+      let cards = document.querySelectorAll(".card");
+      input.addEventListener("keyup", function () {
+      let value = input.value.toLowerCase();
+      cards.forEach(card => {
+     let name = card.querySelector(".name").textContent.toLowerCase();
+      if (name.includes(value)) {
+      card.style.display = "block";
+     } else {
+      card.style.display = "none";
+     }
+   });
+ });
