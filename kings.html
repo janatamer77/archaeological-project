@@ -3,12 +3,406 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>kings | Secrets Of Kemet</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+       html, body{
+            /* background-color: #F8EDE3 ; */
+            background: linear-gradient( to right , #735627 , #ffbc6a89 , #735627);
+            /* background-color: black; */
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            /* min-height: 100vh; */
+        }
+        #h1{
+             color: #F8EDE3;
+             font-size:x-large;
+             font-weight: 900;
+             padding-left: 30px;
+        }
+         /* اب لل nav */
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            text-align: center;
+            background-color: #241b14;
+            width: 100%;
+        }
+        nav{
+            height: 10px;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; 
+            text-align: center;   */
+        } 
+        a{
+            margin-left: 10px;
+            margin-right: 10px;
+            color: #F8EDE3;
+            font-size: large; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+            padding-right: 7px; /* */
+            padding-left: 20px;
+            text-decoration: none;
+            transition: 0.3;  
+        }
+        nav a:hover{
+            color: #d7b547;
+            transform: translateY(-7px);
+       }
+        nav a.active{
+          border-bottom: 2px solid white;
+          color:  #d7b547;
+          font-size: medium;
+        }
+        #h2{
+            margin: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            url("images-kings/photo_2026-04-26_14-07-16.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d7b547;
+            font-size: 50px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px;
+            padding: 20px;
+            padding-left: 140px;
+        }
+        .card{
+            width: 200px;
+            background-color: #F8EDE3;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #d7b547;
+            text-align: center;
+        }
+        .card img{
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+        .card:hover{
+            transform: translateY(-7px);
+            box-shadow: 0 7px 17px #3E2C23;
+            cursor: pointer;
+       }
+       .name{
+        color: #3E2C23;
+        font-size: larger;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }
+       .info{
+        color: #3E2C23;
+        font-size: medium;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }
+       .info-2{
+        color: #3E2C23;
+        font-size: small;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        direction: ltr;
+        text-align: left;
+        padding: 10px;
+       }
+       footer{ 
+        color: #F8EDE3;
+        text-align: center; 
+        background-color: #241b14;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 100%;
+        margin-top: auto;
+       }
+       /* log in button */
+       .button{
+        padding: 5px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 5px;
+        transition: 0.3s;
+        border: 2px solid #d7b547;
+        color: #d7b547;
+       }
+       /* sign in button */
+       .button-2{
+        padding: 5px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 5px;
+        transition: 0.3s;
+        background-color: #d7b547;
+        color: black;
+       }
+       /*  علشان الكلام ميختفيش */
+        .button-2:hover{
+        color: black;
+       } 
+       .search-btn {
+        background: none;
+        border: none;
+        padding: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+       }
+        .search-btn span {
+         color:#d7b547;
+        font-size: 18px;
+        } 
+        .search-btn:hover{
+            transform: scale(0.9);
+        }
+        #search-box{
+            display: none;
+            margin-top: 10px;
+        }
+        #search-box input{
+            padding: 8px;
+            width: 200px;
+            border: none;
+            width: 70%;
+            border-radius: 10px;
+        }
+        #search-box input:hover{
+            border: 3px solid #3E2C23;
+            cursor: pointer;
+        }
+        /* لما يظهر */
+        #search-box.active{
+            display: block;
+            margin-left: 25%;
+        }
+        .sun-icon { 
+            display: none; 
+        } 
+        .moon-icon {
+             display: block; 
+             fill: #F8EDE3;
+            } 
+        .moon-icon:hover{
+            fill: #d7b547;
+            transform: scale(1.1);
+        }
+        .sun-icon:hover{
+            fill: #F8EDE3;
+            transform: scale(1.1);
+        }
+        body.dark-mode {
+             background: black;
+             color: white;
+        }
+        body.dark-mode footer{
+            background-color: black;
+        }
+        body.dark-mode .top{
+            background-color: black;
+        }
+        body.dark-mode .card{
+            box-shadow: 0 0 10px #735627;
+        }
+        body.dark-mode .sun-icon { 
+            display: block; 
+        } 
+        body.dark-mode .moon-icon { 
+            display: none; 
+        } 
+        body.dark-mode #h2{
+             background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+            url("images-kings/photo_2026-04-26_14-07-16.jpg");
+        }
+        .theme-switch {
+         background: none;
+         border: none;
+         cursor: pointer; 
+         padding: 10px;
+        }
 
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <header class="top">
+        
+        <h1 id="h1"> secrets Of Kemet</h1>
+        <nav >
+             <button id="theme-btn" class="theme-switch">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFD700"><path d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
+             <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#555"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
+            </button>
+            <a href="index.html">Home</a>
+            <a href="kings.html" class="active">kings</a>
+            <a href="museums.html">Museums</a>
+            <a href="gallery.html">Gallery </a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contact-us.html"> Contact Us</a>
+            <a href="about.html">About</a>
+            <a href="login.html" class="button"> Log in </a>
+            <a href="sign-in.html" class="button-2">sign up </a>
+            <button class="search-btn">
+                 <span class="bi bi-search"></span>
+            </button>
+        </nav>
+    </header>
 </head>
 <body>
-    <script src="script.js"></script>
+    <h2 id="h2">Kings Of Ancient Egypt</h2>
+    <div id="search-box">
+            <input type="text" placeholder="search......">
+     </div>
+    <div class="row">
+        <div class="card">
+            <img src="images-kings/photo_2026-04-26_17-22-51.jpg" alt="king">
+            <p class="name">Akhenaten (Amenhotep IV)</p>
+             <p class="info">Reign: c.1353–1336 BC</p>
+             <p class="info-2">He ruled during the 18th Dynasty and introduced a new religion worshipping Aten.</p>
+        </div>
+        <div class="card">
+            <img src="images-kings/photo_٢٠٢٦-٠٤-٢٦_٢١-٤١-٤٠.jpg" alt="king">
+            <p class="name">Nefertiti</p>
+            <p class="info">Period: c.1353–1336 BC (Queen Consort)</p>
+            <p class="info-2">She was the queen during Akhenaten’s reign and had great influence in Egypt.</p>
+        </div>
+
+        <div class="card">
+            <!-- <img src="images-kings/photo_2026-04-26_17-23-05.jpg" alt="king"> -->
+            <img src="images-kings/photo_2026-04-30_22-57-32.jpg" alt="king">
+            <p class="name">Menes (Narmer)</p>
+             <p class="info">Reign: c.3150 BC</p>
+             <p class="info-2">He is believed to have united Upper and Lower Egypt.</p>
+        </div>
+         <div class="card">
+            <img src="images-kings/photo_2026-04-26_17-24-52.jpg" alt="king">
+            <p class="name">Tutankhamun</p>
+            <p class="info">Reign: 1332–1323 BC</p>
+             <p class="info-2">He became pharaoh at a young age and his tomb was discovered intact.</p>
+        </div>
+    </div>
+        <div class="row">
+        <div class="card">
+            <img src="images-kings/photo_٢٠٢٦-٠٤-٢٦_٢١-٤١-٤١ (2).jpg" alt="king">
+            <p class="name">Ramesses II</p>
+            <p class="info">Reign: 1279–1213 BC</p>
+            <p class="info-2">One of the most powerful pharaohs, known for great temples and battles.</p>
+        </div>
+         <div class="card">
+            <img src="images-kings/images.jpg" alt="king">
+            <p class="name">Hatshepsut</p>
+            <p class="info">Reign: 1479–1458 BC</p>
+            <p class="info-2">She was one of the most successful female pharaohs in Egyptian history.</p>
+        </div>
+        <div class="card">
+            <img src="images-kings/photo_٢٠٢٦-٠٤-٢٦_٢١-٤١-٤١.jpg" alt="king">
+            <p class="name">Thutmose III</p>
+             <p class="info">Reign: 1479–1425 BC</p>
+              <p class="info-2">He expanded Egypt through many military campaigns.</p>
+        </div>
+        <div class="card">
+            <img src="images-kings/images (1).jpg" alt="king">
+            <p class="name">Khufu</p>
+            <p class="info">Reign: c.2589–2566 BC</p>
+            <p class="info-2">He built the Great Pyramid of Giza.</p>
+        </div>
+    </div>
+    <footer>
+        <p> &copy; 2026 | All Rights Reserved </p>
+    </footer>
+
+    <!-- <script src="script.js"></script> -->
+     <script>
+//         let btn = document.querySelector(".search-btn");
+//         let box = document.getElementById("search-box");
+//         btn.addEventListener("click", function () {
+//         box.classList.toggle("active");
+//       });
+//       let input = document.querySelector("#search-box input");
+//       let cards = document.querySelectorAll(".card");
+//       input.addEventListener("keyup", function () {
+//       let value = input.value.toLowerCase();
+//       cards.forEach(card => {
+//      let name = card.querySelector(".name").textContent.toLowerCase();
+//       if (name.includes(value)) {
+//       card.style.display = "block";
+//      } else {
+//       card.style.display = "none";
+//      }
+//    });
+//  });
+
+
+const themeBtn = document.getElementById('theme-btn');
+const bodyElement = document.body;
+if (localStorage.getItem('theme') === 'dark') {
+    bodyElement.classList.add('dark-mode');
+}
+themeBtn.addEventListener('click', () => {
+    bodyElement.classList.toggle('dark-mode');
+    if (bodyElement.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+
+
+
+
+
+let btn = document.querySelector(".search-btn");
+let box = document.getElementById("search-box");
+if (btn) {
+    btn.addEventListener("click", function () {
+        box.classList.toggle("active");
+    });
+}
+let input = document.querySelector("#search-box input");
+
+if (input) {
+    input.addEventListener("keyup", function () {
+        let value = input.value.toLowerCase();
+        let items = document.querySelectorAll(".card, .museum");
+        items.forEach(item => {
+            let textToSearch = item.textContent.toLowerCase();
+            if (textToSearch.includes(value)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </script>
 </body>
 
 </html>
