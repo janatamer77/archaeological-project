@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickets | Secrets Of Kemet</title>
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <header class="top">
-        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <header class="top">  
         <h1 id="h1"> secrets Of Kemet</h1>
         <nav >
              <button id="theme-btn" class="theme-switch">
@@ -23,15 +23,112 @@
             <a href="about.html">About</a>
             <a href="login.html" class="button"> Log in </a>
             <a href="sign-in.html" class="button-2">sign up </a>
+            <button class="search-btn">
+                 <span class="bi bi-search"></span>
+            </button>
         </nav>
     </header>
-
 </head>
 <body>
+       <style>
+body{
+    background: linear-gradient( to right , #735627 , #ffbc6a89 , #735627);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+.img{
+    background-image: url('../img.jpg.jpeg');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.ticket-table{
+    width: 90%;
+    margin: auto;
+    margin-bottom:50px;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+.ticket-table caption{
+    color: #a87703;
+    font-size: 35px;
+}
+.ticket-table thead{
+    background-color: #DAA520;
+    color: hsl(35, 38%, 9%);
+    border: 1PX solid #7d6016;
+}
+.ticket-table td,.ticket-table th{
+    padding: 15px;
+    text-align: center;
+    border: 1PX solid #7d6016;
+    font-size: 20px;
+}
+.ticket-table tbody tr{
+    background-color:  rgb(7, 7, 7);
+    color: white;
+}
+.ticket-table tbody tr :hover{
+    background-color: #333;
+    box-shadow: 0 0 10px gold;
+}
+.ticket-table thead tr :hover{
+    background-color: #7d6016;
+    box-shadow: 0 0 10px #333;
+}
+    </style>
+    <section class="img"> </section>
+    <script src="script.js"></script>
+<table class="ticket-table">
+    <caption>Site Ticket Prices</caption>
+    <thead>
+        <tr>
+            <th><i class="fas fa-landmark"></i> Site</th>
+            <th><i class="fas fa-user"></i> Egyptian Citizen</th>
+            <th><i class="fas fa-user"></i> Foreign Visitor</th>
+            <th><i class="fas fa-user"></i> Student (Foreign)</th>
+            <th><i class="fas fa-location-dot"></i> Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Giza Pyramids</td>
+            <td>60 EGP</td>
+            <td>540 EGP</td>
+            <td>270 EGP</td>
+            <td>Giza</td>
+        </tr>
+        <tr>
+            <td>Egyptian Museum(Tahrir)</td>
+            <td>30 EGP</td>
+            <td>450 EGP</td>
+            <td>225 EGP</td>  
+            <td>Cairo</td>
+        </tr>
+        <tr>
+            <td>Grand Egyptian Museum(GEM)</td>
+            <td>220 EGP</td>
+            <td>1200 EGP</td>
+            <td>600 EGP</td>
+            <td>Giza</td>
+        </tr>
+        <tr>
+            <td>Vally of the kinds</td>
+            <td>60 EGP</td>
+            <td>600 EGP</td>
+            <td>300 EGP</td>
+            <td>Luxor</td>
+        </tr>   
+    </tbody>
+</table>
     <footer>
         <p> &copy; 2026 | All Rights Reserved </p>
     </footer>
     <script src="script.js"></script>
 </body>
-
 </html>
