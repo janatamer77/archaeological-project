@@ -221,7 +221,8 @@
         color: beige;
        }
        .a:hover{
-		   color:#FAF0E6;
+		   color: #C19A6B;
+		   cursor: pointer;
 	   }
       .plink{
         margin-left: 30px ;
