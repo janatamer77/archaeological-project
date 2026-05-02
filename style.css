@@ -170,14 +170,14 @@
        }
 
        .h1{
-	 width: 100%;
-   	 color:#33240e ; 
+	    width: 100%;
+   	    color:#33240e ; 
         font-size: 40px;
         font-weight: 600;
         font-family: Arial, sans-serif;
-	 text-align: center;
+	    text-align: center;
         margin-top: 50px;
-	 letter-spacing: 3px;
+	    letter-spacing: 3px;
         text-shadow: 6px 6px 4px rgba(125, 83, 39, 0.836);
        }
         .museum-name{
@@ -186,11 +186,11 @@
 	    margin-left: 30px;
        }
       .p{
-	 text-align: start;
-	 justify-content: start;
-	 font-size: 25px;
-	 font-weight: 550;
-	 margin-left: 30px;
+	    text-align: start;
+	    justify-content: start;
+	    font-size: 25px;
+	    font-weight: 550;
+	    margin-left: 30px;
        }
       .museum{
         display: flex;
@@ -201,7 +201,7 @@
        }
       .text{
         width: 70%;
-	     color: #33240e ;/*#1f180e;*/
+	    color: #33240e ;/*#1f180e;*/
         line-height: 40px;
        }
       .mus1{
@@ -221,8 +221,8 @@
         color: beige;
        }
        .a:hover{
-		   color: #C19A6B;
-		   cursor: pointer;
+		color: #C19A6B;
+	    cursor: pointer;
 	   }
       .plink{
         margin-left: 30px ;
