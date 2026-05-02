@@ -180,10 +180,10 @@
 	 letter-spacing: 3px;
         text-shadow: 6px 6px 4px rgba(125, 83, 39, 0.836);
        }
-       h2{
+        .museum-name{
         font-size: 35px;
         font-weight: 600;
-	 margin-left: 30px;
+	    margin-left: 30px;
        }
       .p{
 	 text-align: start;
@@ -201,13 +201,13 @@
        }
       .text{
         width: 70%;
-	 color: #33240e ;/*#1f180e;*/
+	     color: #33240e ;/*#1f180e;*/
         line-height: 40px;
        }
       .mus1{
         width: 400px;
         height: 500px;
-	 margin-right: 70px;
+	    margin-right: 70px;
         margin-top: 70px;
        }
       .museum img{
