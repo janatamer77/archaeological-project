@@ -230,42 +230,6 @@
         text-align: left;
         padding: 10px;
        }
-       .search-btn {
-        background: none;
-        border: none;
-        padding: 12px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: 0.3s;
-       }
-        .search-btn span {
-         color:#d7b547;
-        font-size: 18px;
-        } 
-        .search-btn:hover{
-            transform: scale(0.9);
-        }
-        #search-box{
-            display: none;
-            margin-top: 10px;
-        }
-        #search-box input{
-            padding: 8px;
-            width: 200px;
-            border: none;
-            width: 70%;
-            border-radius: 10px;
-        }
-        #search-box input:hover{
-            border: 3px solid #3E2C23;
-            cursor: pointer;
-        }
-        /* لما يظهر */
-        #search-box.active{
-            display: block;
-            margin-left: 25%;
-        }
-
 
 
        .h1{
