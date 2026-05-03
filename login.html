@@ -6,6 +6,363 @@
     <title>Log In | Secrets Of Kemet</title>
     <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>:root {
+--main-color: #3E2C23;
+--white: #ffffff;
+--accent: #f5a623;
+--dark: #0d0e12;
+--text-muted: #ffffffa6;
+--purple-focus: #8749f2;
+--border-light: #ccc;
+--text-secondary: #666;
+}
+.darkmode{
+    --main-color: #ffffff;
+    --white: #3b2f00;
+    --accent: #f5a623;
+    --dark: #0d0e12;
+    --text-muted: #ffffffa6;
+    --purple-focus: #ffffff;
+    --border-light: #000000;
+    --text-secondary: #ffffff;
+    background-image: url("images/dark.png");
+}
+.darkmode .login-button:hover{
+    background: white
+}
+.darkmode .social-button {
+    color: #000000
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh; 
+background-image: url("images/light.png");
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+margin-top: 100px;
+flex-direction: column;
+margin: 0px;
+padding: 0px;
+}
+
+#h1{
+    color: var(--accent);
+    font-size:x-large;
+    font-weight: 900;
+    padding-left: 30px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #241b14;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;  
+}
+a{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #F8EDE3;
+    font-size: large; 
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-weight: 500;
+    padding-right: 5px; /* */
+    padding-left: 20px;
+    text-decoration: none;
+    transition: 0.3;  
+}
+nav a:hover{
+    color: #d7b547;
+    transform: translateY(-7px);
+}
+nav a.active{
+    border-bottom: 2px solid white;
+    color:  #d7b547;
+    font-size: medium;
+}
+         /* log in button */
+.button{
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: 0.3s;
+    border: 2px solid #d7b547;
+    color: #d7b547;
+}
+/* sign in button */
+.button-2{
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: 0.3s;
+    background-color: #d7b547;
+    color: black;
+}
+.button-2:hover{
+    color: black;
+}
+
+.login-container {
+position: relative;
+width: 100%;
+max-width: 470px;
+padding: 40px 30px;
+background: var(--white);
+border: 1px solid var(--accent);
+border-radius: 10px;
+box-shadow: 0 4px 20px rgba(62, 44, 35, 0.1);
+margin: 100px;
+}
+
+.login-header {
+display: flex;
+flex-direction: column;
+text-align: center;
+margin-bottom: 50px;
+}
+
+.login-header h1 {
+font-family: 'Poppins', sans-serif;
+color: var(--accent);
+font-size: 28px;
+font-weight: 700;
+margin-bottom: 8px;
+}
+
+.login-header p {
+font-family: 'Poppins', sans-serif;
+color: var(--text-secondary);
+font-size: 14px;
+line-height: 1.5;
+}
+
+.form-group {
+position: relative;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.form-group label {
+position: absolute;
+top: 15px;
+left: 15px;
+color: var(--accent);
+font-size: 14px;
+pointer-events: none;
+transition: all 0.3s ease-in-out;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+width: 100%;
+height: 50px;
+font-size: 16px;
+color: var(--main-color);
+padding-left: 15px;
+border: 1px solid var(--accent);
+border-radius: 10px;
+outline: none;
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+background-color: var(--white);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+border-color: var(--purple-focus);
+box-shadow: 0 0 0 3px rgba(135, 73, 242, 0.1);
+}
+
+.form-group input[type="text"]:focus ~ label,
+.form-group input[type="text"]:valid ~ label,
+.form-group input[type="password"]:focus ~ label,
+.form-group input[type="password"]:valid ~ label {
+top: -10px;
+left: 12px;
+font-size: 12px;
+background: var(--white);
+padding: 0 5px;
+color: var(--purple-focus);
+}
+
+.form-group input[type="text"]:valid ~ label,
+.form-group input[type="password"]:valid ~ label {
+color: var(--accent);
+}
+
+.form-options {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
+font-size: 14px;
+gap: 10px;
+}
+
+.checkbox-wrapper {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+width: 18px;
+height: 18px;
+cursor: pointer;
+accent-color: var(--accent);
+}
+
+.checkbox-wrapper label {
+cursor: pointer;
+color: var(--text-secondary);
+margin: 0;
+}
+
+.forgot-password {
+text-decoration: none;
+color: var(--main-color);
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+color: var(--accent);
+}
+
+.login-button {
+width: 100%;
+height: 50px;
+font-family: 'Poppins', sans-serif;
+font-size: 16px;
+font-weight: 600;
+color: var(--white);
+background: var(--main-color);
+border: none;
+border-radius: 10px;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-bottom: 30px;
+}
+
+.login-button:hover {
+background: #2f2419;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(62, 44, 35, 0.3);
+}
+
+.login-button:active {
+transform: translateY(0);
+}
+
+.divider {
+position: relative;
+margin: 30px 0;
+display: flex;
+align-items: center;
+}
+
+.divider hr {
+flex: 1;
+border: none;
+border-top: 1px solid #e0e0e0;
+}
+
+.divider-text {
+padding: 0 15px;
+color: #999;
+font-size: 13px;
+font-weight: 500;
+}
+
+.social-login {
+display: flex;
+gap: 12px;
+margin-bottom: 30px;
+}
+
+.social-button {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+height: 50px;
+border: 1px solid var(--border-light);
+border-radius: 8px;
+background: var(--white);
+cursor: pointer;
+transition: all 0.3s ease;
+font-size: 14px;
+font-weight: 500;
+color: var(--text-secondary);
+}
+
+.social-button:hover {
+border-color: var(--main-color);
+background: #fafafa;
+transform: translateY(-2px);
+}
+
+.social-button img {
+width: 20px;
+height: 20px;
+}
+
+.social-button.google {
+flex: 1;
+}
+
+.social-button.facebook {
+flex: 0 0 50px;
+padding: 0;
+}
+
+.signup-prompt {
+text-align: center;
+padding: 20px 0 0 0;
+border-top: 1px solid #f0f0f0;
+}
+
+.signup-prompt p {
+font-size: 14px;
+color: var(--text-secondary);
+}
+
+.signup-prompt a {
+color: var(--accent);
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s ease;
+}
+
+.signup-prompt a:hover {
+color: var(--main-color);
+}
+</style>
     <header class="top">
         
         <h1 id="h1"> secrets Of Kemet</h1>
