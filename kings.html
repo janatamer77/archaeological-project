@@ -6,17 +6,6 @@
     <title>kings | Secrets Of Kemet</title>
     <link rel="stylesheet" href="style.css">
     <style>
-       html, body{
-            background: linear-gradient( to right , #735627 , #ffbc6a89 , #735627);
-            margin: 0;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        body{
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
 
         .row{
             display: grid;
@@ -62,40 +51,6 @@
         text-align: left;
         padding: 10px;
        }
-       footer{ 
-        color: #F8EDE3;
-        text-align: center; 
-        background-color: #241b14;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        width: 100%;
-        margin-top: auto;
-       }
-       /* log in button */
-       .button{
-        padding: 5px 10px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        margin-left: 5px;
-        transition: 0.3s;
-        border: 2px solid #d7b547;
-        color: #d7b547;
-       }
-       /* sign in button */
-       .button-2{
-        padding: 5px 10px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        margin-left: 5px;
-        transition: 0.3s;
-        background-color: #d7b547;
-        color: black;
-       }
-       /*  علشان الكلام ميختفيش */
-        .button-2:hover{
-        color: black;
-       } 
        .search-btn {
         background: none;
         border: none;
@@ -131,50 +86,11 @@
             display: block;
             margin-left: 25%;
         }
-        .sun-icon { 
-            display: none; 
-        } 
-        .moon-icon {
-             display: block; 
-             fill: #F8EDE3;
-            } 
-        .moon-icon:hover{
-            fill: #d7b547;
-            transform: scale(1.1);
-        }
-        .sun-icon:hover{
-            fill: #F8EDE3;
-            transform: scale(1.1);
-        }
-        body.dark-mode {
-             background: black;
-             color: white;
-        }
-        body.dark-mode footer{
-            background-color: black;
-        }
-        body.dark-mode .top{
-            background-color: black;
-        }
+    
         body.dark-mode .card{
             box-shadow: 0 0 10px #735627;
         }
-        body.dark-mode .sun-icon { 
-            display: block; 
-        } 
-        body.dark-mode .moon-icon { 
-            display: none; 
-        } 
-        body.dark-mode #h2{
-             background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-            url("images-kings/photo_2026-04-26_14-07-16.jpg");
-        }
-        .theme-switch {
-         background: none;
-         border: none;
-         cursor: pointer; 
-         padding: 10px;
-        }
+   
         body.dark-mode .card{
             background-color: #2B1B12;
         }
