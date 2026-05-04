@@ -697,6 +697,7 @@ color: var(--main-color);
     background-color: white;
     padding: 25px;
     border-radius: 12px;
+	cursor:pointer;
 }
 .box:hover {
     transform: scale(1.05);
