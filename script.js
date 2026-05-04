@@ -12,25 +12,27 @@ themeBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
-// search
- let b = document.querySelector(".search-b");
-  let s = document.getElementById("search");
- b.addEventListener("click", function () {
-  s.classList.toggle("active");
-      });
-      let input = document.querySelector("#search input");
-      let cards = document.querySelectorAll(".card");
-      input.addEventListener("keyup", function () {
-      let value = input.value.toLowerCase();
-      cards.forEach(card => {
-     let name = card.querySelector(".name").textContent.toLowerCase();
-      if (name.includes(value)) {
-      card.style.display = "block";
-     } else {
-      card.style.display = "none";
-     }
-   });
- });
+
+let b = document.querySelector(".search-b");
+  let s = document.getElementById("search");
+b.addEventListener("click", function () {
+  s.classList.toggle("active");
+      });
+      let input = document.querySelector("#search input");
+      let cards = document.querySelectorAll(".card");
+      input.addEventListener("keyup", function () {
+      let value = input.value.toLowerCase();
+      cards.forEach(card => {
+     let name = card.querySelector(".name").textContent.toLowerCase();
+      if (name.includes(value)) {
+      card.style.display = "block";
+     } else {
+      card.style.display = "none";
+     }
+   });
+});
+
+
 let pho=document.querySelectorAll('.gallery img');
 let lightbox= document.getElementById('lightbox');
 let lightboxImg= document.querySelector('.lightbox-img');
