@@ -657,6 +657,8 @@ color: var(--main-color);
     /* background-color: #6b4f2b; */
 	 background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
             url("images-kings/photo_2026-04-27_14-05-21.jpg" ); ;
+	background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
     padding: 100px 20px;
