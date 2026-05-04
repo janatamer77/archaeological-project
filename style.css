@@ -658,7 +658,6 @@ color: var(--main-color);
 	color: #241b14;
 }
 .hero {
-    /* background-color: #6b4f2b; */
 	 background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
             url("images-kings/photo_2026-04-27_14-05-21.jpg" ); ;
 	background-size: cover;
@@ -686,9 +685,7 @@ color: var(--main-color);
 }
 .allsections h2 {
     margin-bottom: 20px;
-    /* color: #8b5e34; */
 	color: #d7b547;
-	text-shadow: 3px 3px 5px rgb(125, 83, 39, 0.836);
 }
 .boxes {
     display: grid;
@@ -696,19 +693,15 @@ color: var(--main-color);
     gap: 25px;
     margin-top: 30px;
 }
-
 .box {
     background-color: white;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
-
 .box:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
-
 .box h3 {
     /* color: #8b5e34; */
     margin-bottom: 10px;
