@@ -1,10 +1,10 @@
 //  theme 
-const themeBtn = document.getElementById('theme-btn');
+const themeB = document.getElementById('theme-b');
 const bodyElement = document.body;
 if (localStorage.getItem('theme') === 'dark') {
     bodyElement.classList.add('dark-mode');
 }
-themeBtn.addEventListener('click', () => {
+themeB.addEventListener('click', () => {
     bodyElement.classList.toggle('dark-mode');
     if (bodyElement.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
@@ -13,12 +13,12 @@ themeBtn.addEventListener('click', () => {
     }
 });
 // search
- let btn = document.querySelector(".search-btn");
-  let box = document.getElementById("search-box");
- btn.addEventListener("click", function () {
-  box.classList.toggle("active");
+ let b = document.querySelector(".search-b");
+  let s = document.getElementById("search");
+ b.addEventListener("click", function () {
+  s.classList.toggle("active");
       });
-      let input = document.querySelector("#search-box input");
+      let input = document.querySelector("#search input");
       let cards = document.querySelectorAll(".card");
       input.addEventListener("keyup", function () {
       let value = input.value.toLowerCase();
