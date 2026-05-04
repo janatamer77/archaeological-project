@@ -653,6 +653,74 @@ color: var(--main-color);
     background-color: #7d6016;
     box-shadow: 0 0 10px #333;
 }
+.hero {
+    background-color: #6b4f2b;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.allsections{
+    padding: 50px 80px;
+    text-align: center;
+}
+
+.allsections h2 {
+    margin-bottom: 20px;
+    color: #8b5e34;
+}
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.box:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.box h3 {
+    color: #8b5e34;
+    margin-bottom: 10px;
+}
+
+.why ul {
+    list-style: none;
+}
+
+.why li {
+    background-color: white;
+    margin: 10px auto;
+    padding: 12px;
+    width: 60%;
+    border-radius: 8px;
+}
+
+.team p {
+    max-width: 700px;
+    margin: auto;
+}
+
 
 
 
