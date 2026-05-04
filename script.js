@@ -50,3 +50,76 @@ lightbox.addEventListener('click',function(e){
         lightbox.style.display = "none";
     }
 });
+
+// Sign up & Login Validation
+
+function signup() {
+let email = document.getElementById('email').value;
+let password = document.getElementById('password').value;
+let password2 = document.getElementById('password2').value;
+
+let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if (!email.match(emailPattern)) {
+error.innerText = "Please enter a valid email address!";
+alert('Please enter a valid email address!');
+return false;
+}
+
+if (email == '' || password == '') {
+alert('All fields are required!');
+return;
+}
+
+if (password != password2) {
+alert('Password does not match');
+return;
+}
+
+if (password.length < 6) {
+alert('Password must be at least 6 characters!');
+return;
+}
+
+localStorage.setItem('email', email);
+localStorage.setItem('password', password);
+alert('Succeful Register');
+window.location.href = "login.html";
+return false;
+}
+
+function login() {
+let email = document.getElementById('email').value;
+let password = document.getElementById('password').value;
+let error = document.getElementById("error");
+
+
+let savedEmail = localStorage.getItem('email');
+let savedPassword = localStorage.getItem('password');
+
+let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if (email === "" || password === "") {
+error.innerText = "All fields are required!";
+return false;
+}
+
+if (!email.match(emailPattern)) {
+error.innerText = "Please enter a valid email address!";
+alert('Please enter a valid email address!');
+return false;
+}
+
+if (password.length < 6) {
+error.innerText = "Password must be at least 6 characters!";
+return false;
+}
+
+if (email == savedEmail && password == savedPassword) {
+alert('Welcome to Secret of Kemet');
+window.location.href = "index.html";
+return false;
+} else {
+alert('Wrong password or Email');
+}
+}
