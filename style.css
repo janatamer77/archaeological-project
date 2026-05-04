@@ -215,7 +215,8 @@
             cursor: pointer;
        }
        .name{
-        color: #3E2C23;
+        /* color: #3E2C23; */
+		color: #d7b547;
         font-size: larger;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
        }
