@@ -176,6 +176,7 @@
             url("images-kings/photo_2026-04-26_14-07-16.jpg");
             background-size: cover;
             background-position: center;
+			text-shadow: 3px 3px 5px rgb(125, 83, 39, 0.836);
             height: 300px;
             display: flex;
             align-items: center;
