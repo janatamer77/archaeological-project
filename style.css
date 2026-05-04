@@ -626,6 +626,7 @@ color: var(--main-color);
 }
 .ticket-table caption{
     color: #a87703;
+	text-shadow: 3px 3px 5px rgb(125, 83, 39, 0.836);
     font-size: 35px;
 }
 .ticket-table thead{
