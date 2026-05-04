@@ -722,13 +722,13 @@ color: var(--main-color);
     margin: 10px auto;
     padding: 12px;
     width: 60%;
+	color: #241b14;
     border-radius: 8px;
 }
 .team p {
     max-width: 700px;
     margin: auto;
-	/* color: #F8EDE3; */
-	 color: #241b14;
+	color: #241b14;
 }
 
 
