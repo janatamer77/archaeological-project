@@ -12,7 +12,7 @@ themeBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
-
+// search
 let b = document.querySelector(".search-b");
   let s = document.getElementById("search");
 b.addEventListener("click", function () {
