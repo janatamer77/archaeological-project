@@ -653,6 +653,9 @@ color: var(--main-color);
     background-color: #7d6016;
     box-shadow: 0 0 10px #333;
 }
+.header{
+	color: #d7b547;
+}
 .hero {
     /* background-color: #6b4f2b; */
 	 background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
