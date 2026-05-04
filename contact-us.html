@@ -379,7 +379,7 @@ const phone = document.getElementById('num');
 const message = document.getElementById('area');
 const errorElement = document.getElementById('error');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit',function (e)  {
     let messages = [];
     if (name.value === '' || name.value == null) {
         messages.push("please enter your name");
@@ -407,9 +407,40 @@ form.addEventListener('submit', (e) => {
         errorElement.innerText = messages.join(', ');
     }
 });
+    
+name.oninput = function() {
+    localStorage.setItem('user_name', nam.value);
+};
 
+email.oninput = function() {
+    localStorage.setItem('user_email', emai.value);
+};
 
-       
+phone.oninput = function() {
+    localStorage.setItem('user_phone', phon.value);
+};
+
+message.oninput = function() {
+    sessionStorage.setItem('temp_message', mess.value);
+};
+
+window.onload = function() {
+    if (localStorage.getItem('user_name')) {
+        name.value = localStorage.getItem('user_name');
+    }
+    
+    if (localStorage.getItem('user_email')) {
+        email.value = localStorage.getItem('user_email');
+    }
+    
+    if (localStorage.getItem('user_phone')) {
+        phone.value = localStorage.getItem('user_phone');
+    }
+
+    if (sessionStorage.getItem('temp_message')) {
+        message.value = sessionStorage.getItem('temp_message');
+    }
+};
 
 
 
