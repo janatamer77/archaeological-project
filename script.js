@@ -118,6 +118,7 @@ return false;
 }
 
 if (email == savedEmail && password == savedPassword) {
+sessionStorage.setItem('isLoggedIn', 'true');
 alert('Welcome to Secret of Kemet');
 window.location.href = "index.html";
 return false;
