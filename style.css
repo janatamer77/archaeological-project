@@ -654,7 +654,9 @@ color: var(--main-color);
     box-shadow: 0 0 10px #333;
 }
 .hero {
-    background-color: #6b4f2b;
+    /* background-color: #6b4f2b; */
+	 background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            url("images-kings/photo_2026-04-27_14-05-21.jpg" ); ;
     color: white;
     text-align: center;
     padding: 100px 20px;
