@@ -6,6 +6,258 @@
     <title>Contact Us | Secrets Of Kemet</title>
     <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<style>
+
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .all {
+            background-image: url("images/1777742779560.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+
+
+            background-size: cover;
+
+        }
+
+
+
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+
+        .contact h1 {
+            font-size: 42px;
+            letter-spacing: 2px;
+            color: #000;
+        }
+
+        .line {
+            width: 140px;
+            height: 2px;
+            background: #caa24c;
+            margin: 15px auto;
+        }
+
+        .title {
+            color: #777;
+            margin-bottom: 16px;
+        }
+
+        .container {
+            display: flex;
+
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        .form1 {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 450px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .send {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #000;
+        }
+
+
+
+
+        .input {
+            position: relative;
+            width: 400px;
+            margin-bottom: 15px;
+        }
+
+        .input span {
+            position: absolute;
+            left: 12px;
+            top: 30%;
+            color: #caa24c;
+        }
+
+        .input input,
+        .input textarea {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+
+        }
+
+        .note {
+            height: 100px;
+            resize: none;
+        }
+
+        .butt {
+            width: 400px;
+            padding: 18px;
+            background: linear-gradient(to right, #caa24c, #b88a2a);
+            border: none;
+            color: white;
+            border-radius: 8px;
+            font-size: 15px;
+            transform: translateY(-2px);
+            transition: .3s;
+        }
+
+        .butt:hover {
+            opacity: .85;
+        }
+
+
+        .info {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 430px;
+
+            text-align: left;
+        }
+
+        .item {
+            display: flex;
+
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .item span {
+            background: #f3eee4;
+            padding: 12px;
+            border-radius: 50%;
+
+            color: #caa24c;
+        }
+
+        .item h4 {
+            font-size: 14px;
+            padding-left: 8px;
+            padding-right: 18px;
+
+        }
+
+        .item p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .social {
+            display: flex;
+            margin-right: 15px;
+            margin-top: 20px;
+        }
+
+        .social span {
+            width: 38px;
+            height: 36px;
+            border: 1px #caa24c solid;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+
+            color: #caa24c;
+            justify-content: center;
+            margin-right: 8px;
+        }
+
+        body.dark-mode {
+            background-image: url("images/photo_6030322512849210557_y.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #A08D7D;
+        }
+
+        body.dark-mode .contact h1 {
+            color: #D4A373;
+        }
+
+        body.dark-mode .line {
+            background: #D4A373;
+        }
+
+        body.dark-mode .title {
+            color: #A08D7D;
+        }
+
+
+        body.dark-mode .form1{
+            background: rgba(34, 26, 21, 0.7);
+            border: 1px solid #5E4834;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+
+        body.dark-mode .send
+       
+        {
+            color: #E19F5B;
+        }
+         body.dark-mode .info h3{
+            color: #E19F5B;
+        }
+        body.dark-mode .info {background: rgba(34, 26, 21, 0.7);
+            border: 1px solid #5E4834;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+
+        body.dark-mode .input input,
+        body.dark-mode .input textarea {
+            background: #120E0A;
+            border: 1px solid #44362a;
+            color: #E5E1DB;
+        }
+
+
+        body.dark-mode .input span {
+            color: #C59358;
+        }
+        body.dark-mode .item h4{
+            color: #E19F5B;
+        }
+
+        body.dark-mode .item span {
+            background: #2b221c;
+            color: #D4A373;
+        }
+
+        body.dark-mode .social span {
+            border-color: #D4A373;
+            color: #D4A373;
+        }
+
+
+        body.dark-mode .butt {
+            background: linear-gradient(to right, #6B4124, #C59358, #6B4124);
+            color: #1A1612;
+            font-weight: bold;
+            border: none;
+        }
+
+        body.dark-mode .butt:hover {
+            background: linear-gradient(to right, #C59358, #D4A373, #C59358);
+            transform: translateY(-2px);
+            transition: 0.3s;
+        }
+    </style>
 </head>
 <body>
      <header class="top">
@@ -119,6 +371,51 @@
             </div>
         </div>
     </section>
+       <script>
+const form = document.getElementById('form');
+const name = document.getElementById('textt');
+const email = document.getElementById('email');
+const phone = document.getElementById('num');
+const message = document.getElementById('area');
+const errorElement = document.getElementById('error');
+
+form.addEventListener('submit', (e) => {
+    let messages = [];
+    if (name.value === '' || name.value == null) {
+        messages.push("please enter your name");
+    }
+
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+        messages.push("write the correct  EMAIL");
+    }
+
+    
+    if (phone.value.length < 11) {
+        messages.push(" The phone number must be at least 11 digits");
+    }
+
+    if (message.value.length <= 10) {
+        messages.push("please enter your message");
+    }
+
+    if (messages.length > 0) {
+        e.preventDefault();
+        errorElement.style.color = "red";
+        errorElement.style.marginBottom = "15px";
+        errorElement.innerText = messages.join(', ');
+    }
+});
+
+
+       
+
+
+
+
+
+    </script>
 
 
     <footer>
