@@ -1,10 +1,10 @@
 //  theme 
-const themeB = document.getElementById('theme-b');
+const themeBtn = document.getElementById('theme-btn');
 const bodyElement = document.body;
 if (localStorage.getItem('theme') === 'dark') {
     bodyElement.classList.add('dark-mode');
 }
-themeB.addEventListener('click', () => {
+themeBtn.addEventListener('click', () => {
     bodyElement.classList.toggle('dark-mode');
     if (bodyElement.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
