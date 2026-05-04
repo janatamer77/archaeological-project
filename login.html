@@ -36,30 +36,29 @@ font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 --border-light: #ccc;
 --text-secondary: #666;
 }
-.dark-mode{
-    --main-color: #ffffff;
-    --white: #3b2f00;
-    --accent: #f5a623;
-    --dark: #0d0e12;
+.darkmode{
+    --main-color: linear-gradient(to right, #6B4124, #C59358, #6B4124);
+    --white: rgba(34,26,21,0.7);
+    --accent: #D4A373;
+    --dark: white;
     --text-muted: #ffffffa6;
     --purple-focus: #ffffff;
-    --border-light: #000000;
-    --text-secondary: #ffffff;
+    --border-light: #C59358;
+    --text-secondary: #D4A373;
     background-image: url("images/dark.png");
 }
-        body.dark-mode{
-            background-image: url("images/dark.png");
-            background-size: cover;
-            background-position: center;
-	        background-repeat:no-repeat;
-        }
-.dark-mode .login-button:hover{
-    background: white
+.darkmode .login-button:hover{
+    background: linear-gradient(to right, #C59358, #D4A373, #C59358);
+    transform: translateY(-2px);
+    transition: 0.3s;
 }
-.dark-mode .social-button {
-    color: #000000
+.darkmode .social-button {
+    color: #ffffff
 }
-        
+.darkmode .social-button:hover{
+    color: #6B4124
+
+}        
 </style>
 </head>
 <body>
