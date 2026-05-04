@@ -655,6 +655,8 @@ color: var(--main-color);
 }
 .header{
 	color: #d7b547;
+	font-size: 40px;
+    margin-bottom: 20px;
 }
 .hero {
     /* background-color: #6b4f2b; */
@@ -662,15 +664,16 @@ color: var(--main-color);
             url("images-kings/photo_2026-04-27_14-05-21.jpg" ); ;
 	background-size: cover;
     background-position: center;
+	background-repeat:no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
 }
 
-.hero h2 {
+/* .hero h2 {
     font-size: 40px;
     margin-bottom: 20px;
-}
+} */
 
 .hero p {
     max-width: 700px;
@@ -685,7 +688,8 @@ color: var(--main-color);
 
 .allsections h2 {
     margin-bottom: 20px;
-    color: #8b5e34;
+    /* color: #8b5e34; */
+	color: #d7b547;
 }
 .boxes {
     display: grid;
