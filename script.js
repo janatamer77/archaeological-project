@@ -24,11 +24,16 @@ b.addEventListener("click", function () {
       let value = input.value.toLowerCase();
       cards.forEach(card => {
      let name = card.querySelector(".name").textContent.toLowerCase();
-      if (name.includes(value)) {
-      card.style.display = "block";
-     } else {
-      card.style.display = "none";
-     }
+     //  if (name.includes(value)) {
+     //  card.style.display = "block";
+     // } else {
+     //  card.style.display = "none";
+     // }
+    if (name.includes(value)) {
+    card.classList.remove("hidden");
+    } else {
+    card.classList.add("hidden");
+    }
    });
 });
 
