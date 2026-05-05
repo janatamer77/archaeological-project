@@ -161,7 +161,7 @@
         .layout {
 			 background: none;
              border: none;
-		    fill: #d7b547;
+		     fill: #d7b547;
           }
           .layout:hover {
 			  cursor: pointer;
