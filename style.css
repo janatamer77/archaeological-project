@@ -778,7 +778,7 @@ color: var(--main-color);
         }
         .item {
             display: flex;
-            margin-bottom: 20px;
+            
             align-items: center;
         }
         .item span {
@@ -790,7 +790,7 @@ color: var(--main-color);
         .item h4 {
             font-size: 14px;
             padding-left: 8px;
-            padding-right: 18px;
+           
 			
         }
         .item p {
