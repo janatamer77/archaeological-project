@@ -1,5 +1,5 @@
 //  theme 
-const themeBtn = document.getElementById('theme-btn');
+const themeBtn = document.getElementById('theme-b');
 const bodyElement = document.body;
 if (localStorage.getItem('theme') === 'dark') {
     bodyElement.classList.add('dark-mode');
@@ -32,8 +32,8 @@ b.addEventListener("click", function () {
    });
 });
 
-const btn = document.querySelector(".layout");
-btn.onclick = function () {
+const button = document.querySelector(".layout");
+button.onclick = function () {
   const rows = document.querySelectorAll(".row");
   const firstRow = rows[0];
   const secondRow = rows[1]; 
