@@ -135,22 +135,7 @@ alert('Wrong password or Email');
 
 // Nouran is code
 
-const themeBtn = document.getElementById('theme-b');
-const bodyElement = document.body;
-if (localStorage.getItem('theme') === 'dark') {
-    bodyElement.classList.add('dark-mode');
-}
 
-if (themeBtn) { 
-    themeBtn.addEventListener('click', () => {
-    bodyElement.classList.toggle('dark-mode');
-    if (bodyElement.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
-    }
-});
-}
 
        const form = document.getElementById('form');
 const nam = document.getElementById('textt');
