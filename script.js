@@ -137,7 +137,7 @@ const nam = document.getElementById('textt');
 const emai = document.getElementById('emai');
 const phon = document.getElementById('num');
 const mess = document.getElementById('area');
-const errorElement = document.getElementById('error');
+const errorElement = document.getElementById('err');
 
 form.addEventListener('submit', function(e)  {
     let messages = [];
