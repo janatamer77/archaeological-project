@@ -134,7 +134,7 @@ alert('Wrong password or Email');
 }
 const form = document.getElementById('form');
 const nam = document.getElementById('textt');
-const emai = document.getElementById('email');
+const emai = document.getElementById('emai');
 const phon = document.getElementById('num');
 const mess = document.getElementById('area');
 const errorElement = document.getElementById('error');
