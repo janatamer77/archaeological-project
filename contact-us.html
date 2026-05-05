@@ -14,44 +14,33 @@
      * {
           font-family: 'Poppins', sans-serif;
         }
-
         .all {
             background-image: url("images/light.png");
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
-
-
             background-size: cover;
 
         }
-
-
-
-        .contact {
+        /* .contact {
             padding: 60px 20px;
             text-align: center;
         }
-
-
         .usus {
             font-size: 42px;
             letter-spacing: 2px;
             color: #000;
         }
-
         .line {
             width: 140px;
             height: 2px;
             background: #caa24c;
             margin: 15px auto;
         }
-
         .title {
             color: #777;
             margin-bottom: 16px;
         }
-
         .container {
             display: flex;
 
@@ -59,7 +48,6 @@
             flex-wrap: wrap;
 
         }
-
         .form1 {
             background: white;
             padding: 20px;
@@ -69,43 +57,33 @@
             margin-bottom: 10px;
             text-align: left;
         }
-
         .send {
             margin-bottom: 20px;
             font-weight: 600;
             color: #000;
         }
-
-
-
-
         .input {
             position: relative;
             width: 400px;
             margin-bottom: 15px;
         }
-
         .input span {
             position: absolute;
             left: 12px;
             top: 30%;
             color: #caa24c;
         }
-
         .input input,
         .input textarea {
             width: 100%;
             padding: 12px 12px 12px 40px;
             border: 1px solid #eee;
             border-radius: 8px;
-
         }
-
         .note {
             height: 100px;
             resize: none;
         }
-
         .butt {
             width: 400px;
             padding: 18px;
@@ -117,54 +95,41 @@
             transform: translateY(-2px);
             transition: .3s;
         }
-
         .butt:hover {
             opacity: .85;
         }
-
-
-        .info {
+        .info-in-us {
             background: white;
             padding: 25px;
             border-radius: 12px;
             width: 430px;
-
             text-align: left;
         }
-
         .item {
             display: flex;
-
             margin-bottom: 20px;
             align-items: center;
         }
-
         .item span {
             background: #f3eee4;
             padding: 12px;
             border-radius: 50%;
-
             color: #caa24c;
         }
-
         .item h4 {
             font-size: 14px;
             padding-left: 8px;
             padding-right: 18px;
-
         }
-
         .item p {
             color: #777;
             font-size: 13px;
         }
-
         .social {
             display: flex;
             margin-right: 15px;
             margin-top: 20px;
         }
-
         .social span {
             width: 38px;
             height: 36px;
@@ -172,86 +137,66 @@
             border-radius: 50%;
             display: flex;
             align-items: center;
-
             color: #caa24c;
             justify-content: center;
             margin-right: 8px;
-        }
-
+        } */
         body.dark-mode {
             background-image: url("images/photo_6030322512849210557_y.jpg");
             background-size: cover;
             background-attachment: fixed;
             color: #A08D7D;
         }
-
         body.dark-mode .contact h1 {
             color: #D4A373;
         }
-
         body.dark-mode .line {
             background: #D4A373;
         }
-
         body.dark-mode .title {
             color: #A08D7D;
         }
-
-
         body.dark-mode .form1{
             background: rgba(34, 26, 21, 0.7);
             border: 1px solid #5E4834;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
         }
-
-
-        body.dark-mode .send
-       
-        {
+        body.dark-mode .send {
             color: #E19F5B;
         }
-         body.dark-mode .info h3{
+         body.dark-mode .info-in-us h3{
             color: #E19F5B;
         }
         body.dark-mode .info {background: rgba(34, 26, 21, 0.7);
             border: 1px solid #5E4834;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
         }
-
-
         body.dark-mode .input input,
         body.dark-mode .input textarea {
             background: #120E0A;
             border: 1px solid #44362a;
             color: #E5E1DB;
         }
-
-
         body.dark-mode .input span {
             color: #C59358;
         }
         body.dark-mode .item h4{
             color: #E19F5B;
         }
-
         body.dark-mode .item span {
             background: #2b221c;
             color: #D4A373;
         }
-
         body.dark-mode .social span {
             border-color: #D4A373;
             color: #D4A373;
         }
-
-
         body.dark-mode .butt {
             background: linear-gradient(to right, #6B4124, #C59358, #6B4124);
             color: #1A1612;
             font-weight: bold;
             border: none;
         }
-
         body.dark-mode .butt:hover {
             background: linear-gradient(to right, #C59358, #D4A373, #C59358);
             transform: translateY(-2px);
@@ -285,56 +230,41 @@
         <p class="title">
             We’d love to hear from you! Send us a message and we’ll get back to you as soon as possible.
         </p>
-
         <div class="container">
-            
             <div class="form1">
                 <h3 class="send"><span class="fa-regular fa-envelope"></span> Send Us a Message</h3>
-
-
-
                 <form id="form">
                     <div id="error"></div>
                     <div class="input">
                         <span class="fa-regular fa-user"></span>
                         <input id="textt" type="text" placeholder="Your Name">
                     </div>
-
                     <div class="input">
                         <span class="fa-regular fa-envelope"></span>
                         <input id="email" type="email" placeholder="Your Email">
                     </div>
-
-
-
                     <div class="input">
                         <span class="fa-solid fa-phone"></span>
                         <input id="num" type="number" placeholder="Your Phone">
                     </div>
-
                     <div class="input">
                         <span class="fa-regular fa-pen-to-square"></span>
                         <textarea id="area" class="note" placeholder="Your Message"></textarea>
                     </div>
                     <div>
-
                         <button id="button" class="butt"><span class="fa-solid fa-paper-plane"></span> Send
                             Message</button>
                     </div>
                 </form>
             </div>
-
-            <div class="info">
+            <div class="info-in-us">
                 <h3><span class="fa-regular fa-id-badge"></span> Contact Information</h3>
-
                 <div class="item">
                     <span class="fa-solid fa-location-dot"></span>
                     <h4>Our Location</h4>
                     <p>Cairo, Egypt</p>
                 </div>
-
                 <div>
-
                     <div class="item">
                         <span class="fa-solid fa-phone"></span>
                         <div>
@@ -342,7 +272,6 @@
                             <p>+20 1154056795</p>
                         </div>
                     </div>
-
                     <div class="item">
                         <span class="fa-regular fa-envelope"></span>
                         <div>
@@ -350,7 +279,6 @@
                             <p>info@Secretets-of-KEMET.com</p>
                         </div>
                     </div>
-
                     <div class="item">
                         <span class="fa-regular fa-clock"></span>
                         <div>
@@ -358,15 +286,12 @@
                             <p>Sun - Thu: 9:00 AM - 6:00 PM</p>
                         </div>
                     </div>
-
-                    
                     <div class="social">
                         <span class="fab fa-facebook-f"></span>
                         <span class="fab fa-instagram"></span>
                         <span class="fab fa-twitter"></span>
                         <span class="fab fa-youtube"></span>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -447,7 +372,6 @@ window.onload = function() {
 
 
     </script>
-
 
     <footer>
         <p> &copy; 2026 | All Rights Reserved </p>
