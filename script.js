@@ -32,6 +32,14 @@ b.addEventListener("click", function () {
    });
 });
 
+const btn = document.querySelector(".layout");
+btn.onclick = function () {
+  const rows = document.querySelectorAll(".row");
+  const firstRow = rows[0];
+  const secondRow = rows[1]; 
+  firstRow.parentNode.insertBefore(secondRow, firstRow);
+};
+
 
 let pho=document.querySelectorAll('.gallery img');
 let lightbox= document.getElementById('lightbox');
