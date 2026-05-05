@@ -159,10 +159,12 @@
          padding: 10px;
         }
         .layout {
-           cursor: pointer;
+			 background: none;
+             border: none;
 		    fill: #d7b547;
           }
           .layout:hover {
+			  cursor: pointer;
 			  fill: #F8EDE3;
 			  transform: scale(1.1);
           }
