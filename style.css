@@ -127,7 +127,7 @@
         }
         .sun-icon:hover{
             fill: #F8EDE3;
-            transform: scale(1.1);
+             transform: scale(1.1);
         }
         body.dark-mode {
              background: black;
@@ -158,6 +158,14 @@
          cursor: pointer; 
          padding: 10px;
         }
+        .layout {
+           cursor: pointer;
+		    fill: #d7b547;
+          }
+          .layout:hover {
+			  fill: #F8EDE3;
+			  transform: scale(1.1);
+          }
         footer{ 
         color: #F8EDE3;
         text-align: center; 
