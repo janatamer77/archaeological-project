@@ -176,6 +176,19 @@
         <p> &copy; 2026 | All Rights Reserved </p>
     </footer>
     <script>
+        const themeBtn = document.getElementById('theme-b');
+const bodyElement = document.body;
+if (localStorage.getItem('theme') === 'dark') {
+    bodyElement.classList.add('dark-mode');
+}
+themeBtn.addEventListener('click', () => {
+    bodyElement.classList.toggle('dark-mode');
+    if (bodyElement.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
         
        const form = document.getElementById('form');
 const nam = document.getElementById('textt');
