@@ -7,12 +7,22 @@
     <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
+        body {
+         color: #000000;
+         font-family: 'Oswald', sans-serif;
+         overflow-x: hidden;
+         overflow-y: auto;
+         }
         body.dark-mode #p{
             color: #d7b547;
         }
         body.dark-mode .chapter{
             color: #d7b547;
         }
+        body.dark-mode .sub-title{
+       color: white;
+       filter: drop-shadow(0 0 20px rgba(202, 140, 25, 0.712));
+       }
     </style>
 </head>
 <body>
@@ -135,30 +145,6 @@
 
 
 <style>
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
-
-body {
-    color: #000000;
-    font-family: 'Oswald', sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-#h1{
-     color: #F8EDE3;
-     font-size:x-large;
-     font-weight: 900;
-     padding-left: 30px;
-}
-
 .container {
     flex: 1;
     display: flex;
@@ -333,18 +319,6 @@ body {
     border-radius: 8px;
     display: block;
 }
-
-
-body.dark-mode .sub-title{
-     color: white;
-     filter: drop-shadow(0 0 20px rgba(202, 140, 25, 0.712));
- }
-/* body.dark-mode .content p {
-     color: white;
-        }
- body.dark-mode .description p{
-    color: white;
-        } */
 
 </style>
 
