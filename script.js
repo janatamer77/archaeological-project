@@ -32,13 +32,30 @@ b.addEventListener("click", function () {
    });
 });
 
-const button = document.querySelector(".layout");
-button.onclick = function () {
-  const rows = document.querySelectorAll(".row");
-  const firstRow = rows[0];
-  const secondRow = rows[1]; 
-  firstRow.parentNode.insertBefore(secondRow, firstRow);
+
+const layoutBtn = document.querySelector(".layout");
+const rowS = document.querySelector(".row-s");
+let rows = document.querySelectorAll(".row");
+let isReversed = localStorage.getItem("layout") === "reversed";
+if (isReversed) {
+  rows = document.querySelectorAll(".row");
+  rowS.insertBefore(rows[1], rows[0]);
+}
+layoutBtn.onclick = function () {
+  rows = document.querySelectorAll(".row");
+  if (!isReversed) {
+    rowS.insertBefore(rows[1], rows[0]);
+    localStorage.setItem("layout", "reversed");
+    isReversed = true;
+  } else {
+    rowS.insertBefore(rows[0], rows[1]);
+    localStorage.setItem("layout", "normal");
+    isReversed = false;
+  }
 };
+
+
+
 
 
 let pho=document.querySelectorAll('.gallery img');
