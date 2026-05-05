@@ -109,7 +109,7 @@
             <div class="form1">
                 <h3 class="send"><span class="fa-regular fa-envelope"></span> Send Us a Message</h3>
                 <form id="form">
-                    <div id="err"></div>
+                    <div id="error"></div>
                     <div class="input">
                         <span class="fa-regular fa-user"></span>
                         <input id="textt" type="text" placeholder="Your Name">
@@ -176,49 +176,76 @@
         <p> &copy; 2026 | All Rights Reserved </p>
     </footer>
     <script  src="script.js"> 
-        const form = document.getElementById('form');
+       const form = document.getElementById('form');
 const nam = document.getElementById('textt');
-const emai = document.getElementById('emai');
+const emai = document.getElementById('email');
 const phon = document.getElementById('num');
 const mess = document.getElementById('area');
-const errorElement = document.getElementById('err');
+const errorElement = document.getElementById('error');
 
 form.addEventListener('submit', function(e)  {
     let messages = [];
-
-    if (nam.value === '') {
+    if (nam.value === '' || nam.value == null) {
         messages.push("please enter your name");
     }
 
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emai.value)) {
-        messages.push("write the correct EMAIL");
+        messages.push("write the correct  EMAIL");
     }
 
+    
     if (phon.value.length < 11) {
-        messages.push("phone must be 11 digits");
+        messages.push(" The phone number must be at least 11 digits");
     }
 
     if (mess.value.length <= 10) {
-        messages.push("message must be more than 10 characters");
+        messages.push("please enter your message");
     }
 
     if (messages.length > 0) {
         e.preventDefault();
+        errorElement.style.color = "red";
+        errorElement.style.marginBottom = "15px";
         errorElement.innerText = messages.join(', ');
     }
 });
-        nam.oninput = () => localStorage.setItem('user_name', nam.value);
-emai.oninput = () => localStorage.setItem('user_email', emai.value);
-phon.oninput = () => localStorage.setItem('user_phone', phon.value);
-mess.oninput = () => sessionStorage.setItem('temp_message', mess.value);
+
+nam.oninput = function() {
+    localStorage.setItem('user_name', nam.value);
+};
+
+emai.oninput = function() {
+    localStorage.setItem('user_email', emai.value);
+};
+
+phon.oninput = function() {
+    localStorage.setItem('user_phone', phon.value);
+};
+
+mess.oninput = function() {
+    sessionStorage.setItem('temp_message', mess.value);
+};
 
 window.onload = function() {
-    nam.value = localStorage.getItem('user_name')  '';
-    emai.value = localStorage.getItem('user_email')  '';
-    phon.value = localStorage.getItem('user_phone')  '';
-    mess.value = sessionStorage.getItem('temp_message')  '';
+    if (localStorage.getItem('user_name')) {
+        nam.value = localStorage.getItem('user_name');
+    }
+    
+    if (localStorage.getItem('user_email')) {
+        emai.value = localStorage.getItem('user_email');
+    }
+    
+    if (localStorage.getItem('user_phone')) {
+        phon.value = localStorage.getItem('user_phone');
+    }
+
+    if (sessionStorage.getItem('temp_message')) {
+        mess.value = sessionStorage.getItem('temp_message');
+    }
 };
+
 
 
 </script>
