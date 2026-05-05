@@ -813,6 +813,11 @@ color: var(--main-color);
             margin-right: 8px;
         }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .container {
     flex: 1;
@@ -855,7 +860,6 @@ color: var(--main-color);
 }
 .image2{
    display: flex; 
-   position: relative;
    margin-top: 200px;
    margin-right: 50px;
    text-align: left;
