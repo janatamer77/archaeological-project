@@ -33,7 +33,7 @@ themeBtn.addEventListener('click', () => {
 // });
 
  let b = document.querySelector(".search-b");
-  let s = document.getElementById("search-box");
+  let s = document.getElementById("search");
  btn.addEventListener("click", function () {
   box.classList.toggle("active");
       });
