@@ -152,7 +152,7 @@
              background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
             url("images-kings/photo_2026-04-26_14-07-16.jpg");
         }
-        .theme-switch {
+        #theme-b {
          background: none;
          border: none;
          cursor: pointer; 
