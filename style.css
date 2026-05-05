@@ -156,15 +156,18 @@
          background: none;
          border: none;
          cursor: pointer; 
-         padding: 10px;
+         padding: 5px;
         }
         .layout {
 			 background: none;
              border: none;
-		     fill: #d7b547;
+		     padding: 5px;
+			cursor: pointer;
           }
-          .layout:hover {
-			  cursor: pointer;
+         .s-t{
+			 fill: #d7b547;
+		 }
+          .s-t:hover {
 			  fill: #F8EDE3;
 			  transform: scale(1.1);
           }
