@@ -131,3 +131,93 @@ return false;
 alert('Wrong password or Email');
 }
 }
+
+
+// Nouran is code
+
+const themeBtn = document.getElementById('theme-b');
+const bodyElement = document.body;
+if (localStorage.getItem('theme') === 'dark') {
+    bodyElement.classList.add('dark-mode');
+}
+
+if (themeBtn) { 
+    themeBtn.addEventListener('click', () => {
+    bodyElement.classList.toggle('dark-mode');
+    if (bodyElement.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+}
+
+       const form = document.getElementById('form');
+const nam = document.getElementById('textt');
+const emai = document.getElementById('email');
+const phon = document.getElementById('num');
+const mess = document.getElementById('area');
+const errorElement = document.getElementById('error');
+
+form.addEventListener('submit', function(e)  {
+    let messages = [];
+    if (nam.value === '' || nam.value == null) {
+        messages.push("please enter your name");
+    }
+
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emai.value)) {
+        messages.push("write the correct  EMAIL");
+    }
+
+    
+    if (phon.value.length < 11) {
+        messages.push(" The phone number must be at least 11 digits");
+    }
+
+    if (mess.value.length <= 10) {
+        messages.push("please enter your message");
+    }
+
+    if (messages.length > 0) {
+        e.preventDefault();
+        errorElement.style.color = "red";
+        errorElement.style.marginBottom = "15px";
+        errorElement.innerText = messages.join(', ');
+    }
+});
+
+nam.oninput = function() {
+    localStorage.setItem('user_name', nam.value);
+};
+
+emai.oninput = function() {
+    localStorage.setItem('user_email', emai.value);
+};
+
+phon.oninput = function() {
+    localStorage.setItem('user_phone', phon.value);
+};
+
+mess.oninput = function() {
+    sessionStorage.setItem('temp_message', mess.value);
+};
+
+window.onload = function() {
+    if (localStorage.getItem('user_name')) {
+        nam.value = localStorage.getItem('user_name');
+    }
+    
+    if (localStorage.getItem('user_email')) {
+        emai.value = localStorage.getItem('user_email');
+    }
+    
+    if (localStorage.getItem('user_phone')) {
+        phon.value = localStorage.getItem('user_phone');
+    }
+
+    if (sessionStorage.getItem('temp_message')) {
+        mess.value = sessionStorage.getItem('temp_message');
+    }
+};
