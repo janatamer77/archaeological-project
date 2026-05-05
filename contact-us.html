@@ -172,63 +172,7 @@
         </div>
     </section>
        <script>
-const form = document.getElementById('form');
-const name = document.getElementById('textt');
-const email = document.getElementById('email');
-const phone = document.getElementById('num');
-const message = document.getElementById('area');
-const errorElement = document.getElementById('error');
 
-form.addEventListener('submit',function (e)  {
-    let messages = [];
-    if (name.value === '' || name.value == null) {
-        messages.push("please enter your name");
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email.value)) {
-        messages.push("write the correct  EMAIL");
-    }
-    if (phone.value.length < 11) {
-        messages.push(" The phone number must be at least 11 digits");
-    }
-    if (message.value.length <= 10) {
-        messages.push("please enter your message");
-    }
-    if (messages.length > 0) {
-        e.preventDefault();
-        errorElement.style.color = "red";
-        errorElement.style.marginBottom = "15px";
-        errorElement.innerText = messages.join(', ');
-    }
-});
-    
-name.oninput = function() {
-    localStorage.setItem('user_name', nam.value);
-};
-email.oninput = function() {
-    localStorage.setItem('user_email', emai.value);
-};
-phone.oninput = function() {
-    localStorage.setItem('user_phone', phon.value);
-};
-message.oninput = function() {
-    sessionStorage.setItem('temp_message', mess.value);
-};
-window.onload = function() {
-    if (localStorage.getItem('user_name')) {
-        name.value = localStorage.getItem('user_name');
-    }
-    if (localStorage.getItem('user_email')) {
-        email.value = localStorage.getItem('user_email');
-    }
-    if (localStorage.getItem('user_phone')) {
-        phone.value = localStorage.getItem('user_phone');
-    }
-    if (sessionStorage.getItem('temp_message')) {
-        message.value = sessionStorage.getItem('temp_message');
-    }
-};
-    </script>
     <footer>
         <p> &copy; 2026 | All Rights Reserved </p>
     </footer>
