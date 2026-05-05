@@ -175,7 +175,40 @@
     <footer>
         <p> &copy; 2026 | All Rights Reserved </p>
     </footer>
-    <script src="script.js"> </script>
+    <script > nam.oninput = function() {
+    localStorage.setItem('user_name', nam.value);
+};
+
+emai.oninput = function() {
+    localStorage.setItem('user_email', emai.value);
+};
+
+phon.oninput = function() {
+    localStorage.setItem('user_phone', phon.value);
+};
+
+mess.oninput = function() {
+    sessionStorage.setItem('temp_message', mess.value);
+};
+
+window.onload = function() {
+    if (localStorage.getItem('user_name')) {
+        nam.value = localStorage.getItem('user_name');
+    }
+    
+    if (localStorage.getItem('user_email')) {
+        emai.value = localStorage.getItem('user_email');
+    }
+    
+    if (localStorage.getItem('user_phone')) {
+        phon.value = localStorage.getItem('user_phone');
+    }
+
+    if (sessionStorage.getItem('temp_message')) {
+        mess.value = sessionStorage.getItem('temp_message');
+    }
+};
+</script>
 </body>
 
 </html>
