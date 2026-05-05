@@ -208,6 +208,17 @@ form.addEventListener('submit', function(e)  {
         errorElement.innerText = messages.join(', ');
     }
 });
+        nam.oninput = () => localStorage.setItem('user_name', nam.value);
+emai.oninput = () => localStorage.setItem('user_email', emai.value);
+phon.oninput = () => localStorage.setItem('user_phone', phon.value);
+mess.oninput = () => sessionStorage.setItem('temp_message', mess.value);
+
+window.onload = function() {
+    nam.value = localStorage.getItem('user_name')  '';
+    emai.value = localStorage.getItem('user_email')  '';
+    phon.value = localStorage.getItem('user_phone')  '';
+    mess.value = sessionStorage.getItem('temp_message')  '';
+};
 
 
 </script>
