@@ -32,49 +32,28 @@ themeBtn.addEventListener('click', () => {
 //    });
 // });
 
- let b = document.querySelector(".search-b");
-  let s = document.getElementById("search");
- btn.addEventListener("click", function () {
-  box.classList.toggle("active");
-      });
-      let input = document.querySelector("#search input");
-      let cards = document.querySelectorAll(".card");
-      input.addEventListener("keyup", function () {
-      let value = input.value.toLowerCase();
-      cards.forEach(card => {
-     let name = card.querySelector(".name").textContent.toLowerCase();
-      if (name.includes(value)) {
-      card.style.display = "block";
-     } else {
-      card.style.display = "none";
-     }
-   });
+ 
 
-
-
-
-
-
-// const layoutBtn = document.querySelector(".layout");
-// const rowS = document.querySelector(".row-s");
-// let rows = document.querySelectorAll(".row");
-// let isReversed = localStorage.getItem("layout") === "reversed";
-// if (isReversed) {
-//   rows = document.querySelectorAll(".row");
-//   rowS.insertBefore(rows[1], rows[0]);
-// }
-// layoutBtn.onclick = function () {
-//   rows = document.querySelectorAll(".row");
-//   if (!isReversed) {
-//     rowS.insertBefore(rows[1], rows[0]);
-//     localStorage.setItem("layout", "reversed");
-//     isReversed = true;
-//   } else {
-//     rowS.insertBefore(rows[0], rows[1]);
-//     localStorage.setItem("layout", "normal");
-//     isReversed = false;
-//   }
-// };
+const layoutBtn = document.querySelector(".layout");
+const rowS = document.querySelector(".row-s");
+let rows = document.querySelectorAll(".row");
+let isReversed = localStorage.getItem("layout") === "reversed";
+if (isReversed) {
+  rows = document.querySelectorAll(".row");
+  rowS.insertBefore(rows[1], rows[0]);
+}
+layoutBtn.onclick = function () {
+  rows = document.querySelectorAll(".row");
+  if (!isReversed) {
+    rowS.insertBefore(rows[1], rows[0]);
+    localStorage.setItem("layout", "reversed");
+    isReversed = true;
+  } else {
+    rowS.insertBefore(rows[0], rows[1]);
+    localStorage.setItem("layout", "normal");
+    isReversed = false;
+  }
+};
 
 
 
