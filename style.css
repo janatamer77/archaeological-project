@@ -712,7 +712,7 @@ color: var(--main-color);
             color: #777;
             margin-bottom: 16px;
         }
-        .container {
+        .contain {
             display: flex;
 
             justify-content: center;
