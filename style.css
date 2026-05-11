@@ -257,6 +257,7 @@
        }
       .p{
 	    text-align: start;
+		justify-content: start;  
 	    font-size: 25px;
 	    font-weight: 550;
 	    margin-left: 30px;
