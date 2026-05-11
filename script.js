@@ -1,9 +1,10 @@
-const themeBtn = document.getElementById('theme-b');
-const bodyElement = document.body;
+//theme
+let themeBtn = document.getElementById('theme-b');
+let bodyElement = document.body;
 if (localStorage.getItem('theme') === 'dark') {
     bodyElement.classList.add('dark-mode');
 }
-themeBtn.addEventListener('click', () => {
+themeBtn.addEventListener('click',  function() {
     bodyElement.classList.toggle('dark-mode');
     if (bodyElement.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
@@ -11,35 +12,34 @@ themeBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
-
+// search
 let b = document.querySelector(".search-b");
-  let s = document.getElementById("search");
+let s = document.getElementById("search");
 b.addEventListener("click", function () {
-  s.classList.toggle("active");
-      });
-      let input = document.querySelector("#search input");
-      let cards = document.querySelectorAll(".card");
-      input.addEventListener("keyup", function () {
-      let value = input.value.toLowerCase();
-      cards.forEach(card => {
-     let name = card.querySelector(".name").textContent.toLowerCase();
+ s.classList.toggle("active");
+});
+let input = document.querySelector("#search input");
+ let cards = document.querySelectorAll(".card");
+  input.addEventListener("keyup", function () {
+     let value = input.value.toLowerCase();
+ cards.forEach(card => {
+     let name = card.querySelector(".name").textContent.toLowerCase();
     if (name.includes(value)) {
     card.classList.remove("hidden");
     } else {
-    card.classList.add("hidden");
-    }
-   });
+    card.classList.add("hidden");}
 });
-
-const layoutBtn = document.querySelector(".layout");
-const rowS = document.querySelector(".row-s");
+});
+// layaut
+let layoutBtn = document.querySelector(".layout");
+let rowS = document.querySelector(".row-s");
 let isReversed = localStorage.getItem("layout") === "reversed";
 if (isReversed) {
-  const rows = document.querySelectorAll(".row");
+  let rows = document.querySelectorAll(".row");
   rowS.insertBefore(rows[1], rows[0]);
 }
 layoutBtn.onclick = function () {
-  const rows = document.querySelectorAll(".row");
+  let rows = document.querySelectorAll(".row");
   if (!isReversed) {
     rowS.insertBefore(rows[1], rows[0]);
     localStorage.setItem("layout", "reversed");
@@ -133,4 +133,4 @@ alert('Wrong password or Email');
 }
 
 
-// Nouran is code
+
